@@ -23884,7 +23884,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="FIA IFV1 -";
+							value="FIA TECH1 -";
 						};
 					};
 				};
@@ -24040,7 +24040,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="FIA IFV2 -";
+							value="FIA TECH2 -";
 						};
 					};
 				};
@@ -32010,7 +32010,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Gendarmerie MK -";
+							value="Gendarmerie Marksman -";
 						};
 					};
 				};

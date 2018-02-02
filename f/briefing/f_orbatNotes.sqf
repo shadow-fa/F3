@@ -4,9 +4,6 @@
 
 if (!hasInterface) exitWith {}; //Exit if not a player.
 
-// Group IDs need to be set before the ORBAT listing can be created
-// waitUntil {scriptDone f_script_setGroupIDs};
-
 // Define needed variables
 private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots","_hiddenGroups","_color","_veharray","_vehName","_veh","_crewrole","_groupList"];
 _orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
