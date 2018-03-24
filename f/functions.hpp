@@ -55,7 +55,6 @@ class F // Defines the "owner"
 		file = "f\FTMemberMarkers";
 		class SetLocalFTMemberMarkers{};
 		class GetMarkerColor{};
-		class LocalFTMarkerSync{};
 	};
 	class bodyRemoval
 	{
@@ -70,8 +69,8 @@ class F // Defines the "owner"
 	class mapClickTeleport
 	{
 		file = "f\mapClickTeleport";
-		class mapClickTeleportUnit{};
-		class mapClickTeleportGroup{};
+		class mapClickTeleportAction{};
+		class mapClickTeleportSetPos{};
 		class mapClickTeleportParachute{};
 	};
 	class nametag

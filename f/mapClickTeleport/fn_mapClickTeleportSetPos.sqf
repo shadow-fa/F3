@@ -1,10 +1,5 @@
 // F3 - Mission Maker Teleport
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-// ====================================================================================
-
-// DECLARE VARIABLES AND FUNCTIONS
-
-private ["_dispersion","_string"];
 
 // ====================================================================================
 
@@ -15,10 +10,7 @@ params [
 	["_pos", [0,0,0], [[]], 3]
 ];
 
-_dispersion = 100; // The maximum dispersion for units when HALO jumping
-
-_string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
-f_var_mapClickTeleport_textDone = localize format ["STR_f_mapClick%1Done",_string];
+private _dispersion = 100; // The maximum dispersion for units when HALO jumping
 
 // ====================================================================================
 
@@ -31,14 +23,13 @@ if !(local _unit) exitWith {};
 // ====================================================================================
 
 // TELEPORT UNITS
-// Loop through the group's units (excluding the leader) and check if they are local, if true teleport
-// them next to the leader and display a notification for players
 
 if (f_var_mapClickTeleport_Height == 0) then {
-	_unit setPos [((_pos select 0) + 3 + random 3),((_pos select 1) + 3 + random 3),(_pos select 2)];
+	_pos = _pos vectorAdd [random 10 - random 10, random 10 - random 10, 0];
 } else {
-	_unit setPos [((_pos select 0) + random _dispersion - random _dispersion),((_pos select 1) + random _dispersion - random _dispersion),(_pos select 2) + random 15 - random 15];
+	_pos = _pos vectorAdd [random _dispersion - random _dispersion, random _dispersion - random _dispersion, f_var_mapClickTeleport_Height + random 15 - random 15];
 };
+_unit setPos _pos;
 
 // Display a notification for players
 if (_unit == vehicle player) then {["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification};

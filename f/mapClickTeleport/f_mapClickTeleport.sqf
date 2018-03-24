@@ -3,13 +3,13 @@
 // ====================================================================================
 
 // Only run this for players
-if (isDedicated) exitWith{};
+if (!hasInterface) exitWith{};
 
 // ====================================================================================
 
 // MAKE SURE THE PLAYER INITIALIZES PROPERLY
 
-if (!isDedicated && (isNull player)) then
+if (isNull player) then
 {
     waitUntil {sleep 0.1; !isNull player};
 };
@@ -23,6 +23,15 @@ if (isNil "f_var_mapClickTeleport_TimeLimit") then {f_var_mapClickTeleport_TimeL
 if (isNil "f_var_mapClickTeleport_GroupTeleport") then {f_var_mapClickTeleport_GroupTeleport = false};
 if (isNil "f_var_mapClickTeleport_Units") then {f_var_mapClickTeleport_Units = []};
 if (isNil "f_var_mapClickTeleport_Height") then {f_var_mapClickTeleport_Height = 0};
+
+// Setup the localized strings for the various stages of the component
+// Depending on the setting of the height variable the strings either use the teleport or the HALO option.
+
+private _string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
+
+f_var_mapClickTeleport_textAction = localize format ["STR_f_mapClick%1Action",_string];
+f_var_mapClickTeleport_textDone = localize format ["STR_f_mapClick%1Done",_string];
+f_var_mapClickTeleport_textSelect = localize format ["STR_f_mapClick%1Select",_string];
 
 // Make sure that no non-existing units have been parsed
 {
@@ -47,25 +56,13 @@ if (f_var_mapClickTeleport_GroupTeleport && player != leader group player)  exit
 
 // ====================================================================================
 
-// SET KEY VARIABLES
-// Setup the localized strings for the various stages of the component
-// Depending on the setting of the height variable the strings either use the teleport or the HALO option.
-
-private _string = if (f_var_mapClickTeleport_Height == 0) then {"Teleport"} else {"HALO"};
-
-f_var_mapClickTeleport_textAction = localize format ["STR_f_mapClick%1Action",_string];
-f_var_mapClickTeleport_textDone = localize format ["STR_f_mapClick%1Done",_string];
-f_var_mapClickTeleport_textSelect = localize format ["STR_f_mapClick%1Select",_string];
-
-// ====================================================================================
-
 // ADD TELEPORT ACTION TO PLAYER ACTION MENU
 // Whilst the player is alive we add the teleport action to the player's action menu.
 // If the player dies we wait until he is alive again and re-add the action.
 
-f_mapClickTeleportAction = player addaction [f_var_mapClickTeleport_textAction,{[] spawn f_fnc_mapClickTeleportUnit},"", 0, false,true,"","_this == player"];
+f_mapClickTeleportAction = player addaction [f_var_mapClickTeleport_textAction,{[] spawn f_fnc_mapClickTeleportAction},"", 0, false,false,"","_this == player"];
 
 if (f_var_mapClickTeleport_TimeLimit > 0) then {
-	sleep f_var_mapClickTeleport_TimeLimit;
+	uiSleep f_var_mapClickTeleport_TimeLimit;
 	player removeAction f_mapClickTeleportAction;
 };
