@@ -167,7 +167,7 @@ f_var_viewDistance_crewOnly = true;
 // f_var_mapClickTeleport_GroupTeleport = false; 	// False: everyone can teleport. True: Only group leaders can teleport and will move their entire group.
 // f_var_mapClickTeleport_Units = [];				// Restrict map click teleport to these units
 // f_var_mapClickTeleport_Height = 0;				// If > 0 map click teleport will act as a HALO drop and automatically assign parachutes to units
-// [] execVM "f\mapClickTeleport\f_mapClickTeleportAction.sqf";
+// [] execVM "f\mapClickTeleport\f_mapClickTeleport.sqf";
 
 // ====================================================================================
 

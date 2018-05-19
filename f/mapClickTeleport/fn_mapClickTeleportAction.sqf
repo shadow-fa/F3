@@ -5,7 +5,19 @@
 // SET KEY VARIABLES
 
 f_var_mapClickTeleport_telePos = nil;
+f_var_mapClickTeleport_MapClosed = false;
 if (isNil "f_var_mapClickTeleport_Used") then {f_var_mapClickTeleport_Used = 0};
+
+// ====================================================================================
+// Eventhandler to detect closing of the map
+// in case the player has not clicked on the map to select a teleport position.
+
+f_var_mapClickTeleport_EHMap = addMissionEventHandler ["Map", {
+	params ["_mapIsOpened", ""];
+	if (!_mapIsOpened) exitWith {
+		f_var_mapClickTeleport_MapClosed = true;
+	};
+}];
 
 // ====================================================================================
 
@@ -18,8 +30,13 @@ if (isNil "f_var_mapClickTeleport_Used") then {f_var_mapClickTeleport_Used = 0};
 
 ["mapClickTeleportEH", "onMapSingleClick", {f_var_mapClickTeleport_telePos = _pos;}] call BIS_fnc_addStackedEventHandler;
 openMap [true, false];
-waitUntil {!isNil "f_var_mapClickTeleport_telePos"};
+waitUntil {f_var_mapClickTeleport_MapClosed || !isNil "f_var_mapClickTeleport_telePos"};
 ["mapClickTeleportEH", "onMapSingleClick"] call BIS_fnc_removeStackedEventHandler;
+
+removeMissionEventHandler ["Map", f_var_mapClickTeleport_EHMap];
+
+//Exit if the map was closed without selecting a position.
+if (f_var_mapClickTeleport_MapClosed) exitWith {};
 
 //Select units to be teleported
 private _units = [player];
