@@ -8,28 +8,25 @@ if (!hasInterface) exitWith {}; //Exit if not a player.
 waitUntil {scriptDone f_script_setGroupIDs};
 
 // Define needed variables
-private ["_orbatText", "_groups", "_precompileGroups","_maxSlots","_freeSlots","_hiddenGroups","_color","_veharray","_vehName","_veh","_crewrole","_groupList"];
-_orbatText = "<br />NOTE: The ORBAT below is only accurate at mission start.<br />
+private _orbatText = "NOTE: The ORBAT below is only accurate at mission start.<br />
 <br />
 <font size='18'>GROUP LEADERS + NOTABLE</font><br /><br />";
-_groups = [];
-_hiddenGroups = [];
 
-{
-	// Add to ORBAT if side matches, group isn't already listed, and group has players
-	if ((side _x == side group player) && !(_x in _groups) && ({_x in playableUnits} count units _x) > 0) then {
-	//if ((side _x == side group player) && !(_x in _groups)) then {
-		_groups pushBack _x;
-	};
-} forEach allGroups;
+private _hiddenGroups = [];
 
+private _icon_arrow = "<img image='\A3\ui_f\data\gui\rscCommon\rscTree\hiddenTexture_ca.paa' height='16'/>";
+
+// Add groups to ORBAT if side matches, group isn't already listed, and group has players
+private _groups = allGroups select {(side _x == side group player) && ({_x in playableUnits} count units _x) > 0};
+//Only allow unique groups:
+_groups = _groups arrayIntersect _groups;
 // Remove groups we don't want to show
 _groups = _groups - _hiddenGroups;
 
 // Loop through the group, print out group ID, leader name and medics if present
 {
 	// Highlight the player's group with a different color (based on the player's side)
-	_color = "#FFFFFF";
+	private _color = "#FFFFFF";
 	if (_x == group player) then {
 		_color = switch (side player) do {
 			 case west: {"#0080FF"};
@@ -42,49 +39,40 @@ _groups = _groups - _hiddenGroups;
 	_orbatText = _orbatText + format ["<font color='%3'>%1 %2</font>", _x, name leader _x,_color] + "<br />";
 
 	{
-		if (_x getVariable ["f_var_assignGear",""] == "m" && {_x != leader group _x}) then {
-			_orbatText = _orbatText + format["|- %1 [M]",name _x] + "<br />";
-		};
-
-		if (_x getVariable ["f_var_assignGear",""] == "jtac" && {_x != leader group _x}) then {
-
-			// FAC is a specialised JTAC, so need some way to differentiate
-			if ((roleDescription _x) find "FAC" != -1) then {
-				_orbatText = _orbatText + format["|- %1 [FAC]",name _x] + "<br />";
-			} else {
-				_orbatText = _orbatText + format["|- %1 [JTAC]",name _x] + "<br />";
-			};
-		};
-	} forEach units _x;
+		//Note: FAC is a specialised JTAC. so additional differentiation is needed
+		_orbatText = _orbatText + (switch [_x getVariable ["f_var_assignGear",""], (roleDescription _x) find "FAC" != -1] do {
+			case ["m",    false]: { format["%1 %2 [M]<br />",    _icon_arrow, name _x] };
+			case ["jtac", false]: { format["%1 %2 [JTAC]<br />", _icon_arrow, name _x] };
+			case ["jtac", true ]: { format["%1 %2 [FAC]<br />",  _icon_arrow, name _x] };
+			default { "" };
+		});
+	} forEach (units _x - [leader _x]);
 } forEach _groups;
 
-_veharray = [];
+// Get all player vehicles
+private _veharray = [];
 {
-	if ({vehicle _x != _x} count units _x > 0 ) then {
-		{
-			if (vehicle _x != _x) then {
-				_veharray pushBackUnique (vehicle _x);
-			};
-		} forEach units _x;
-	};
+	{
+		_veharray pushBackUnique (vehicle _x);
+	} forEach (units _x select {vehicle _x != _x});
 } forEach _groups;
 
 if (count _veharray > 0) then {
 
-_orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
+	_orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 	{
 		 // Filter all characters which might break the diary entry (such as the & in Orca Black & White)
-		_vehName = [getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname"),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_- "] call BIS_fnc_filterString;
+		private _vehName = [getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayname"),"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_- "] call BIS_fnc_filterString;
 
-		_orbatText = _orbatText + "<br />" + format["%1 ",_vehName];
+		_orbatText = _orbatText + "<br />" + _vehName;
 
 		// Workaround for http://feedback.arma3.com/view.php?id=21602
-		_maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") + (count allTurrets [_x, true] - count allTurrets _x);
-		_freeSlots = _x emptyPositions "cargo";
+		private _maxSlots = getNumber(configfile >> "CfgVehicles" >> typeof _x >> "transportSoldier") + (count allTurrets [_x, true] - count allTurrets _x);
+		private _freeSlots = _x emptyPositions "cargo";
 
 		if (_maxSlots > 0) then {
-			_orbatText = _orbatText + format ["[%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
+			_orbatText = _orbatText + format [" [%1/%2]",(_maxSlots-_freeSlots),_maxSlots];
 		};
 
 		_orbatText = _orbatText  + "<br />";
@@ -92,8 +80,8 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 		{
 			if ((assignedVehicleRole _x select 0) != "CARGO") then {
 
-				_veh = vehicle _x;
-				_crewrole = switch (true) do {
+				private _veh = vehicle _x;
+				private _crewrole = switch (true) do {
 					case (driver _veh == _x && !((vehicle _x isKindOf "helicopter") || (vehicle _x isKindOf "plane"))):{" [D]"};
 					case (driver _veh == _x && ((vehicle _x isKindOf "helicopter") || (vehicle _x isKindOf "plane"))):{" [P]"};
 					case (commander _veh == _x):{" [CO]"};
@@ -102,12 +90,11 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 					default {" [C]"};
 				};
 
-				_orbatText = _orbatText + format["|- %1",name _x] + _crewrole + "<br/>";
+				_orbatText = _orbatText + format["%1 %2", _icon_arrow, name _x] + _crewrole + "<br/>";
 			};
 		} forEach crew _x;
 
-		_groupList = [];
-
+		private _groupList = [];
 		{
 			if (!(group _x in _groupList) && {(assignedVehicleRole _x select 0) == "CARGO"} count (units group _x) > 0) then {
 				_groupList pushBack (group _x);
@@ -116,7 +103,7 @@ _orbatText = _orbatText + "<br />VEHICLE CREWS + PASSENGERS<br />";
 
 		if (count _groupList > 0) then {
 			{
-				_orbatText =_orbatText + format["|- %1", _x] + " [CARGO] <br />";
+				_orbatText =_orbatText + format["%1 %2", _icon_arrow, _x] + " [CARGO] <br />";
 			} forEach _groupList;
 		};
 
