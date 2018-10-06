@@ -383,20 +383,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smgmag, 4];
 		_unit addItem "ToolKit";
 	};
-// Helicopter Pilot Loadout:
-	case "pp":
-	{
-		_unit setUnitTrait ["engineer",true]; // Can repair
-		_unit addBackpack _bag;
-		_unit addmagazines [_smgmag, 1];
-		_unit addweapon _smg;
-		_unit addItem _firstaid ;
-		_unit addmagazines [_smokegrenadeblue, 4];
-		_unit addmagazines [_smgmag, 4];
-		_unit addItem "ToolKit";
-	};
-// Helicopter Crew Chief Loadout:
-	case "pcc":
+// Jet Pilot Loadout:
+	case "jp":
 	{
 		_unit setUnitTrait ["engineer",true]; // Can repair
 		_unit addBackpack _bag;
@@ -408,13 +396,18 @@ switch (_typeofUnit) do
 		_unit addItem "ToolKit";
 	};
 // Helicopter Crew Loadout:
+	case "pp";
+	case "pcc";
 	case "pc":
 	{
+		_unit setUnitTrait ["engineer",true]; // Can repair
+		_unit addBackpack _bag;
 		_unit addmagazines [_smgmag, 1];
 		_unit addweapon _smg;
 		_unit addItem _firstaid ;
 		_unit addmagazines [_smokegrenadeblue, 4];
 		_unit addmagazines [_smgmag, 4];
+		_unit addItem "ToolKit";
 	};
 // Engineer (Demo) Loadout:
 	case "eng":
