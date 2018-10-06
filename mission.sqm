@@ -33149,6 +33149,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""v_jet"",this] call f_fnc_assignGear;";
+				name="VehNATO_CAS1";
 			};
 			id=1134;
 			type="B_Plane_CAS_01_dynamicLoadout_F";
@@ -33265,6 +33267,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""v_jet"",this] call f_fnc_assignGear;";
+				name="VehAAF_CAS1";
 			};
 			id=1139;
 			type="I_Plane_Fighter_03_dynamicLoadout_F";
@@ -33481,6 +33485,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="[""v_jet"",this] call f_fnc_assignGear;";
+				name="VehCSAT_CAS1";
 			};
 			id=1146;
 			type="O_Plane_CAS_02_dynamicLoadout_F";
