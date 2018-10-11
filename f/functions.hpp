@@ -49,6 +49,7 @@ class F // Defines the "owner"
 		file = "f\groupMarkers";
 		class localGroupMarker{};
 		class localSpecialistMarker{};
+		class groupData{preInit = 1;};
 	};
 	class authorisedCrew
 	{

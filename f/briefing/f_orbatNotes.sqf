@@ -23,6 +23,17 @@ _groups = _groups arrayIntersect _groups;
 // Remove groups we don't want to show
 _groups = _groups - _hiddenGroups;
 
+// Use the groupData,
+// change the variable name (the first field) to the variable itself,
+// then filter out any non-groups, and groups we don't want to show.
+private _groupData = f_var_groupData_all apply {
+	[
+		missionNamespace getVariable [_x select 0,grpNull], 
+		_x select 1, 
+		_x select 3
+	]
+} select { ! isNull (_x select 0) && {(_x select 0) in _groups}};
+
 // Loop through the group, print out group ID, leader name and medics if present
 {
 	// Highlight the player's group with a different color (based on the player's side)
@@ -36,7 +47,18 @@ _groups = _groups - _hiddenGroups;
  		};
 	};
 
-	_orbatText = _orbatText + format ["<font color='%3'>%1 %2</font>", _x, name leader _x,_color] + "<br />";
+	//group marker icon:
+	private _grpIcon = "";
+	private _thisGroup = _x;
+	private _dataForThisGroup = _groupData select {_x select 0 == _thisGroup};
+	if (count _dataForThisGroup > 0) then {
+		_dataForThisGroup select 0 params ["", "_mIcon", "_mColor"];
+		_mIcon = getText (configfile >> "CfgMarkers" >> _mIcon >> "icon");
+		_mColor = getArray (configfile >> "CfgMarkerColors" >> _mColor >> "color") call BIS_fnc_colorRGBAtoHTML;
+		_grpIcon = format ["<img color='%1' image='%2' height='20'/> ", _mColor, _mIcon];
+	};
+
+	_orbatText = _orbatText + format ["%4<font color='%3'>%1 %2</font>", _x, name leader _x,_color,_grpIcon] + "<br />";
 
 	{
 		//Note: FAC is a specialised JTAC. so additional differentiation is needed

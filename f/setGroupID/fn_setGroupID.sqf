@@ -10,6 +10,6 @@ params ["_grp_var", "_grp_id"];
 // Check first if the group exists
 
 _grp = missionNamespace getVariable[_grp_var,grpNull];
-if(!isNull _grp) then {
+if(!isNull _grp && _grp isEqualType grpNull) then {
 	_grp setGroupId [_grp_id,"GroupColor0"];
 };
