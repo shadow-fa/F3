@@ -33296,7 +33296,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="[""jp"",this] call f_fnc_assignGear;";
 						name="UnitAAF_CAS1_P";
-						description="AAF Attack Helo 1 Pilot";
+						description="AAF CAS1 Pilot";
 						isPlayable=1;
 					};
 					id=1143;
