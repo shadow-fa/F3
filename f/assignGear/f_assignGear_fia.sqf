@@ -203,8 +203,9 @@ _DMrifle = "srifle_DMR_06_olive_F";
 _DMriflemag = "20Rnd_762x51_Mag";
 
 // Rifleman AT
-_RAT = "launch_RPG32_F";
-_RATmag = "RPG32_F";
+_RAT = "launch_MRAWS_olive_rail_F";
+_RATmag1 = "MRAWS_HEAT_F";
+_RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
 _MAT = "launch_NLAW_F";

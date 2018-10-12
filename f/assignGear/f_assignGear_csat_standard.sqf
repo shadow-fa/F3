@@ -1,4 +1,4 @@
-// F3 - Folk ARPS Assign Gear Script - AAF - Light Loadout
+// F3 - Folk ARPS Assign Gear Script - CSAT - Standard Loadout
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
@@ -29,18 +29,20 @@ switch (_typeofUnit) do
 		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
-		_unit addmagazines [_RATmag, 1];
+		_unit addmagazines [_RATmag1, 1];
 		_unit addweapon _RAT;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines [_RATmag, 1];
+		_unit addmagazines [_RATmag1, 1];
+		_unit addmagazines [_RATmag2, 1];
 	};
 // Assistant Autorifleman Loadout:
 	case "aar":
 	{
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -49,6 +51,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_ARmag, 1];
+		_unit addmagazines [_RATmag1, 1];
 	};
 // Fire Team Leader Loadout:
 	case "ftl":
@@ -158,8 +161,22 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_MMGmag, 2];
 	};
-// Medium MG Team Leader Loadout:
+// Medium MG Assistant Loadout:
 	case "mmgag":
+	{
+		_unit addBackpack _bag;
+		_unit addmagazines [_riflemag, 1];
+		_unit addweapon _rifle;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
+		_unit addmagazines [_riflemag_tr, 2];
+		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag, 2];
+	};
+// Medium MG Team Leader Loadout:
+	case "mmgl":
 	{
 		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
@@ -211,8 +228,21 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_MATmag1, 2];
 	};
-// Medium AT Team Leader Loadout:
+// Medium AT Assistant Loadout:
 	case "matag":
+	{
+		_unit addBackpack _bag;
+		_unit addmagazines [_riflemag, 1];
+		_unit addweapon _rifle;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
+		_unit addmagazines [_riflemag_tr, 2];
+		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_MATmag1, 2];
+	};
+// Medium AT Team Leader Loadout:
+	case "matl":
 	{
 		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
@@ -239,8 +269,21 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_HATmag1, 1];
 	};
-// Heavy AT Team Leader Loadout:
+// Heavy AT Assistant Loadout:
 	case "hatag":
+	{
+		_unit addBackpack _bagLarge;
+		_unit addmagazines [_riflemag, 1];
+		_unit addweapon _rifle;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
+		_unit addmagazines [_riflemag_tr, 2];
+		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_HATmag1, 2];
+	};
+// Heavy AT Team Leader Loadout:
+	case "hatl":
 	{
 		_unit addBackpack _bagLarge;
 		_unit addmagazines [_riflemag, 1];
@@ -290,8 +333,21 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag, 2];
 		_unit addmagazines [_carbinemag_tr, 2];
 	};
-// Medium SAM Team Leader Loadout:
+// Medium SAM Assistant Loadout:
 	case "msamag":
+	{
+		_unit addBackpack _baglarge;
+		_unit addmagazines [_riflemag, 1];
+		_unit addweapon _rifle;
+		_unit addItem _firstaid;
+		_unit addmagazines [_smokegrenade, 3];
+		_unit addmagazines [_riflemag, 4];
+		_unit addmagazines [_riflemag_tr, 2];
+		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_SAMmag, 2];
+	};
+// Medium SAM Team Leader Loadout:
+	case "msaml":
 	{
 		_unit addBackpack _baglarge;
 		_unit addmagazines [_riflemag, 1];

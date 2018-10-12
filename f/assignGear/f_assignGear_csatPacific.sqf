@@ -205,7 +205,8 @@ _DMriflemag = "20Rnd_650x39_Cased_Mag_F";
 
 // Rifleman AT
 _RAT = "launch_RPG32_ghex_F";
-_RATmag = "RPG32_F";
+_RATmag1 = "RPG32_F";
+_RATmag2 = "RPG32_HE_F";
 
 // Medium AT
 _MAT = "launch_NLAW_F";

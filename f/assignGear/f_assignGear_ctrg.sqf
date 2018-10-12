@@ -199,8 +199,9 @@ _DMriflemag = "20Rnd_762x51_Mag";
 //_DMriflemag = "10Rnd_338_Mag";
 
 // Rifleman AT
-_RAT = "launch_NLAW_F";
-_RATmag = "NLAW_F";
+_RAT = "launch_MRAWS_green_F";
+_RATmag1 = "MRAWS_HEAT_F";
+_RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
 _MAT = "launch_NLAW_F";

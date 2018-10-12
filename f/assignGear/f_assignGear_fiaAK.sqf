@@ -204,7 +204,8 @@ _DMriflemag = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG7_F";
-_RATmag = "RPG7_F";
+_RATmag1 = "RPG7_F";
+_RATmag2 = "RPG7_F"; // RPG7 has no HE rocket
 
 // Medium AT
 _MAT = "launch_NLAW_F";
