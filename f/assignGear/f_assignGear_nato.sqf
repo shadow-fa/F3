@@ -14,16 +14,20 @@
 //		aar			- assistant automatic rifleman
 //		rat			- rifleman (AT)
 //		dm			- designated marksman
+//		mmgl		- medium mg team leader
 //		mmgg		- medium mg gunner
 //		mmgag		- medium mg assistant
+//		matl		- medium AT team leader
 //		matg		- medium AT gunner
 //		matag		- medium AT assistant
 //		hmgg		- heavy mg gunner (deployable)
 //		hmgag		- heavy mg assistant (deployable)
-//		hatg		- heavy AT gunner (deployable)
-//		hatag		- heavy AT assistant (deployable)
+//		hatl		- heavy AT team leader
+//		hatg		- heavy AT gunner
+//		hatag		- heavy AT assistant
 //		mtrg		- mortar gunner (deployable)
 //		mtrag		- mortar assistant (deployable)
+//		msaml		- medium SAM team leader
 //		msamg		- medium SAM gunner
 //		msamag		- medium SAM assistant gunner
 //		hsamg		- heavy SAM gunner (deployable)
@@ -33,9 +37,8 @@
 //		vc			- vehicle commander
 //		vg			- vehicle gunner
 //		vd			- vehicle driver (repair)
-//		pp			- air vehicle pilot / co-pilot (repair)
-//		pcc			- air vehicle co-pilot (repair) / crew chief (repair)
 //		pc			- air vehicle crew
+//		jp			- jet pilot
 //		eng			- engineer (demo)
 //		engm		- engineer (mines)
 //		uav			- UAV operator
@@ -271,7 +274,7 @@ _pilotGlasses = [];
 // Jet Pilot
 _jetUniform = ["U_B_PilotCoveralls"];
 _jetHelmet = ["H_PilotHelmetFighter_B"];
-_jetRig = ["V_TacVest_blk"];
+_jetRig = [];
 _jetGlasses = [];
 
 // Crewman
