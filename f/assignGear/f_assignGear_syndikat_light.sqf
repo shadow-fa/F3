@@ -157,7 +157,8 @@ switch (_typeofUnit) do
 		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
-		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addmagazines [_smokegrenade, 4];
 	};
 // Medium MG Assistant Loadout:

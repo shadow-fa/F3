@@ -123,6 +123,7 @@ _glmag = "1Rnd_HE_Grenade_shell";
 
 // Smoke for FTLs, Squad Leaders, etc
 _glsmokewhite = "1Rnd_Smoke_Grenade_shell";
+_glsmokegreen = "1Rnd_SmokeGreen_Grenade_shell";
 _glsmokered = "1Rnd_SmokeRed_Grenade_shell";
 
 // Flares for FTLs, Squad Leaders, etc
@@ -139,8 +140,8 @@ _pistolmag = "16Rnd_9x21_Mag";
 _grenade = "HandGrenade";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
-_smokegrenadeblue = "SmokeShellBlue";
 _smokegrenadegreen = "SmokeShellGreen";
+_smokegrenadeblue = "SmokeShellBlue";
 _smokegrenadepurple = "SmokeShellPurple";
 
 // misc medical items.
@@ -211,6 +212,7 @@ _RATmag2 = "RPG32_HE_F";
 // Medium AT
 _MAT = "launch_NLAW_F";
 _MATmag1 = "NLAW_F";
+_MATmag2 = "NLAW_F";
 
 // Surface Air
 _SAM = "launch_O_Titan_ghex_F";

@@ -35,7 +35,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 4];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_RATmag1, 1];
@@ -134,7 +134,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 4];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addItem _medkit;
 		_unit addItem _firstaid;
@@ -201,7 +201,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
 // Heavy MG Team Leader Loadout:
@@ -228,7 +228,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_MATmag1, 2];
 	};
@@ -270,7 +270,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_HATmag1, 1];
 	};
@@ -310,7 +310,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
 // Mortar Team Leader Loadout:
@@ -337,7 +337,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
 // Medium SAM Assistant Loadout:
@@ -376,7 +376,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
 // Heavy SAM Team Leader Loadout:
@@ -487,7 +487,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 4];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addItem "ToolKit";
@@ -503,7 +503,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 4];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addItem "ToolKit";
@@ -520,7 +520,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 4];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit linkItem _uavterminal;
 	};
@@ -557,7 +557,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 4];
-		_unit addmagazines [_carbinemag_tr , 2];
+		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};

@@ -36,18 +36,22 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_RATmag1, 1];
+		_unit addmagazines [_RATmag2, 1];
 	};
 // Assistant Autorifleman Loadout:
 	case "aar":
 	{
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_ARmag, 2];
 		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_ARmag, 2];
+		_unit addmagazines [_RATmag1, 1];
 	};
 // Fire Team Leader Loadout:
 	case "ftl":
@@ -139,12 +143,12 @@ switch (_typeofUnit) do
 // Designated Marksman Loadout:
 	case "dm":
 	{
-		_unit addmagazines [_DMriflemag , 1];
+		_unit addmagazines [_DMriflemag, 1];
 		_unit addweapon _DMrifle;
 		_attachments = [_bipod1,_scope2]; // Overwrites default attachments to add a bipod and scope 2
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_DMriflemag , 4];
+		_unit addmagazines [_DMriflemag, 4];
 		_unit addmagazines [_DMriflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
 	};
@@ -202,7 +206,7 @@ switch (_typeofUnit) do
 // Heavy MG Team Leader Loadout:
 	case "hmgag":
 	{
-		_unit addBackpack _baghmgag ;
+		_unit addBackpack _baghmgag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -215,7 +219,7 @@ switch (_typeofUnit) do
 // Medium AT Gunner Loadout:
 	case "matg":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
         _unit addmagazines [_MATmag1, 1];
@@ -334,7 +338,7 @@ switch (_typeofUnit) do
 // Medium SAM Assistant Loadout:
 	case "msamag":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -347,7 +351,7 @@ switch (_typeofUnit) do
 // Medium SAM Team Leader Loadout:
 	case "msaml":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -372,7 +376,7 @@ switch (_typeofUnit) do
 // Heavy SAM Team Leader Loadout:
 	case "hsamag":
 	{
-		_unit addBackpack _baghmgag ;
+		_unit addBackpack _baghmgag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -467,7 +471,7 @@ switch (_typeofUnit) do
 // Engineer (Demo) Loadout:
 	case "eng":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
@@ -482,7 +486,7 @@ switch (_typeofUnit) do
 // Engineer (Mines) Loadout:
 	case "engm":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;

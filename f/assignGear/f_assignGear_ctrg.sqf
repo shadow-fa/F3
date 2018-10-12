@@ -141,8 +141,8 @@ _grenade = "HandGrenade";
 _Mgrenade = "MiniGrenade";
 _smokegrenade = "SmokeShell";
 _smokegrenadegreen = "SmokeShellGreen";
-_smokegrenadepurple = "SmokeShellPurple";
 _smokegrenadeblue = "SmokeShellBlue";
+_smokegrenadepurple = "SmokeShellPurple";
 
 // misc medical items.
 _firstaid = "FirstAidKit";
@@ -215,6 +215,7 @@ _SAMmag = "Titan_AA";
 // Heavy AT
 _HAT = "launch_B_Titan_tna_F";
 _HATmag1 = "Titan_AT";
+_HATmag2 = "Titan_AP";
 
 // Sniper
 _SNrifle = "srifle_LRR_F";

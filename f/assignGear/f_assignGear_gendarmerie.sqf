@@ -305,7 +305,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag, 1];
 		_unit addweapon _pistol;
 		_unit addmagazines [_pistolmag, 7];
-		_unit addItem _firstaid ;
+		_unit addItem _firstaid;
 		_unit addmagazines [_riflemag, 7];
 		_attachments pushback (_silencer1); // Adds silencer
 		_hg_attachments pushback (_hg_silencer1); // Adds pistol silencer

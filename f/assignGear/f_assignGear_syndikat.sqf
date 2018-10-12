@@ -199,14 +199,16 @@ _RATmag2 = "RPG32_HE_F";
 // Medium AT
 _MAT = "launch_NLAW_F";
 _MATmag1 = "NLAW_F";
-
-// Heavy AT
-_HAT = "launch_I_Titan_short_F";
-_HATmag1 = "Titan_AT";
+_MATmag2 = "NLAW_F";
 
 // Surface Air
 _SAM = "launch_Titan_F";
 _SAMmag = "Titan_AA";
+
+// Heavy AT
+_HAT = "launch_I_Titan_short_F";
+_HATmag1 = "Titan_AT";
+_HATmag2 = "Titan_AP";
 
 // Sniper
 _SNrifle = "srifle_LRR_F";
@@ -279,7 +281,6 @@ _sfuniform = _baseUniform;
 _sfhelmet = _baseHelmet;
 _sfRig = _standardRig;
 _sfGlasses = [];
-
 
 // ====================================================================================
 

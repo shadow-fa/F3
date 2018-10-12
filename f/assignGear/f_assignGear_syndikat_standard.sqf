@@ -67,8 +67,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
-		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_smokegrenadegreen, 2];
+		_unit addmagazines [_smokegrenade, 4];
 		_unit addWeapon "Rangefinder";
 	};
 // Squad Leader / DC Loadout:
@@ -159,7 +159,8 @@ switch (_typeofUnit) do
 		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
-		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addmagazines [_smokegrenade, 4];
 	};
 // Medium MG Assistant Loadout:
@@ -331,8 +332,8 @@ switch (_typeofUnit) do
 		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
-		_unit addmagazines [_SAMmag, 1];
 		_unit addweapon _SAM;
+		_unit addmagazines [_SAMmag, 1];
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];

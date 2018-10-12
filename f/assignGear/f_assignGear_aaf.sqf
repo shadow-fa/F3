@@ -163,11 +163,9 @@ _chemred = "Chemlight_red";
 _chemyellow =  "Chemlight_yellow";
 _chemblue = "Chemlight_blue";
 
-// Standard Backpacks
+// Backpacks
 _bag = "B_AssaultPack_dgtl";			// The standard bag for most classes
 _bagLarge = "B_Kitbag_rgr";				// Larger bag for some special purpose classes
-
-// Special Backpacks
 _bagdiver =  "B_AssaultPack_blk";		// used by divers
 _baguav = "I_UAV_01_backpack_F";			// used by UAV operator
 _baghmgg = "I_HMG_01_weapon_F";				// used by Heavy MG gunner
@@ -230,8 +228,8 @@ _APmine2 = "APERSMine_Range_Mag";
 
 // CLOTHES AND UNIFORMS
 
-// Define special vest loadouts. This defines which gear class gets which vest
-// Normal infantry will be given either light or standard rigs, depending on the loadout parameter
+// Define classes. This defines which gear class gets which uniform
+// "medium" vests are used for all classes if they are not assigned a specific uniform
 
 _diver = ["div"];
 _pilot = ["pp","pcc","pc"];

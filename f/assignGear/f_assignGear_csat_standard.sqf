@@ -83,6 +83,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
+		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_pistolmag, 2];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
@@ -217,7 +218,7 @@ switch (_typeofUnit) do
 // Medium AT Gunner Loadout:
 	case "matg":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
         _unit addmagazines [_MATmag1, 1];
@@ -336,7 +337,7 @@ switch (_typeofUnit) do
 // Medium SAM Assistant Loadout:
 	case "msamag":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -349,7 +350,7 @@ switch (_typeofUnit) do
 // Medium SAM Team Leader Loadout:
 	case "msaml":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
@@ -469,7 +470,7 @@ switch (_typeofUnit) do
 // Engineer (Demo) Loadout:
 	case "eng":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
@@ -484,7 +485,7 @@ switch (_typeofUnit) do
 // Engineer (Mines) Loadout:
 	case "engm":
 	{
-		_unit addBackpack _baglarge;
+		_unit addBackpack _bagLarge;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
