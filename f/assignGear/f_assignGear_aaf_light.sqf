@@ -36,6 +36,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_RATmag1, 1];
 	};
 // Assistant Autorifleman Loadout:
 	case "aar":
