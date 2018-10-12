@@ -42,7 +42,7 @@ switch (_typeofUnit) do
 // Assistant Autorifleman Loadout:
 	case "aar":
 	{
-		_unit addweapon _RAT;
+		_unit addBackpack _bag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid ;
