@@ -249,7 +249,7 @@ _baseHelmet = ["H_HelmetIA"];
 _baseGlasses = [];
 
 // Vests
-_lightRig = ["V_Chestrig_khk"];
+_lightRig = ["V_PlateCarrierIA2_dgtl"];
 _standardRig = ["V_PlateCarrierIA2_dgtl"];
 
 // Diver

@@ -256,7 +256,7 @@ _baseHelmet = ["H_HelmetB_tna_F"];
 _baseGlasses = [];
 
 // Vests
-_lightRig = ["V_Chestrig_oli"];
+_lightRig = ["V_PlateCarrier2_tna_F"];
 _standardRig = ["V_PlateCarrier2_tna_F"];
 
 // Diver

@@ -252,7 +252,7 @@ _baseHelmet = ["H_Watchcap_khk","H_Shemag_olive_hs","H_MilCap_tna_F","H_Cap_khak
 _baseGlasses = [];
 
 // Vests
-_lightRig = ["V_Chestrig_khk","V_Chestrig_rgr"];
+_lightRig = ["V_PlateCarrierH_CTRG"];
 _standardRig = ["V_PlateCarrierH_CTRG"];
 
 // Diver
