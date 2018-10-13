@@ -174,8 +174,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag_tr, 1];
 	};
 // Medium MG Team Leader Loadout:
 	case "mmgl":
@@ -188,8 +188,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addWeapon "Rangefinder";
 	};
 // Heavy MG Gunner Loadout:

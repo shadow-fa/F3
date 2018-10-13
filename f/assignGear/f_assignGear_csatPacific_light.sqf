@@ -157,7 +157,8 @@ switch (_typeofUnit) do
 		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag_tr, 1];
 	};
 // Medium MG Assistant Loadout:
 	case "mmgag":
@@ -170,8 +171,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines [_MMGmag, 1];
 		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag_tr, 1];
 	};
 // Medium MG Team Leader Loadout:
 	case "mmgl":
@@ -184,8 +185,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines [_MMGmag, 1];
 		_unit addmagazines [_MMGmag, 2];
+		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addWeapon "Rangefinder";
 	};
 // Heavy MG Gunner Loadout:
