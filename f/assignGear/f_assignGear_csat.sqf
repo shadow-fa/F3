@@ -52,6 +52,12 @@
 //		v_car		- car/4x4
 //		v_tr		- truck
 //		v_ifv		- ifv
+//		v_tank		- tank
+//		v_helo_l	- Rotary Transport Light
+//		v_helo_m	- Rotary Transport Medium
+//		v_helo_h	- Rotary Transport Heavy
+//		v_helo_a	- Rotary Attack
+//		v_jet		- Jet
 //
 //		crate_small	- small ammocrate
 //		crate_med	- medium ammocrate
