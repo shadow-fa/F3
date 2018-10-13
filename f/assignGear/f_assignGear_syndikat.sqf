@@ -195,6 +195,7 @@ _ARmag_tr = "200Rnd_556x45_Box_Tracer_F";
 // Medium MG
 _MMG = "LMG_Zafir_F";
 _MMGmag = "150Rnd_762x54_Box";
+_MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 
 // Marksman rifle
 _DMrifle = "srifle_DMR_03_F";
@@ -293,15 +294,6 @@ _sfGlasses = [];
 
 // ====================================================================================
 
-// INTERPRET PASSED VARIABLES
-// The following interprets what has been passed to this script element
-
-_typeofUnit = toLower (_this select 0);	// Tidy input for SWITCH/CASE statements, expecting something like : r = Rifleman, co = Commanding Officer, rat = Rifleman (AT)
-_unit = _this select 1;					// expecting name of unit; originally passed by using 'this' in unit init
-_isMan = _unit isKindOf "CAManBase";	// We check if we're dealing with a soldier or a vehicle
-
-// ====================================================================================
-
 // This block needs only to be run on an infantry unit
 if (_isMan) then {
 
@@ -353,16 +345,3 @@ if (_loadout == 1) then {
 };
 
 // ====================================================================================
-
-// If this isn't run on an infantry unit we can exit
-if !(_isMan) exitWith {};
-
-// ====================================================================================
-
-// Handle weapon attachments
-#include "f_assignGear_attachments.sqf";
-
-// ====================================================================================
-
-// ENSURE UNIT HAS CORRECT WEAPON SELECTED ON SPAWNING
-_unit selectweapon primaryweapon _unit;
