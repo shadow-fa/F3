@@ -49,8 +49,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_ARmag, 2];
 		_unit addmagazines [_grenade, 2];
+		_unit addmagazines [_ARmag, 2];
 		_unit addmagazines [_RATmag1, 1];
 	};
 // Fire Team Leader Loadout:
@@ -83,6 +83,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
+		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_pistolmag, 2];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
@@ -269,7 +270,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_HATmag1, 1];
 	};
-// Heavy AT Team Leader Loadout:
+// Heavy AT Assistant Loadout:
 	case "hatag":
 	{
 		_unit addBackpack _bagLarge;

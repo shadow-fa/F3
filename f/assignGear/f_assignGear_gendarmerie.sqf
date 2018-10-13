@@ -94,7 +94,7 @@ _chemblue = "Chemlight_blue";
 
 // Backpacks
 _bag = "B_AssaultPack_blk";
-_baglarge = "B_Kitbag_blk";
+_bagLarge = "B_Kitbag_blk";
 
 // ====================================================================================
 
