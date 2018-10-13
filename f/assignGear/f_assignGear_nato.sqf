@@ -211,9 +211,9 @@ _RATmag1 = "MRAWS_HEAT_F";
 _RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "launch_MRAWS_sand_F";
+_MATmag1 = "MRAWS_HEAT_F";
+_MATmag2 = "MRAWS_HE_F";
 
 // Surface Air
 _SAM = "launch_B_Titan_F";

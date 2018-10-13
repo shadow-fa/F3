@@ -213,18 +213,18 @@ _RATmag1 = "RPG32_F";
 _RATmag2 = "RPG32_HE_F";
 
 // Medium AT
-_MAT = "launch_NLAW_F";
-_MATmag1 = "NLAW_F";
-_MATmag2 = "NLAW_F";
+_MAT = "launch_RPG32_ghex_F";
+_MATmag1 = "RPG32_F";
+_MATmag2 = "RPG32_HE_F";
 
 // Surface Air
 _SAM = "launch_O_Titan_ghex_F";
 _SAMmag = "Titan_AA";
 
 // Heavy AT
-_HAT = "launch_O_Titan_short_ghex_F";
-_HATmag1 = "Titan_AT";
-_HATmag2 = "Titan_AP";
+_HAT = "launch_O_Vorona_green_F";
+_HATmag1 = "Vorona_HEAT";
+_HATmag2 = "Vorona_HE";
 
 // Sniper
 _SNrifle = "srifle_GM6_ghex_F";

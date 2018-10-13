@@ -206,6 +206,11 @@ _RAT = "launch_MRAWS_green_F";
 _RATmag1 = "MRAWS_HEAT_F";
 _RATmag2 = "MRAWS_HE_F";
 
+// Alternative RAT weapon
+//_RAT = "launch_MRAWS_green_F";
+//_RATmag1 = "MRAWS_HEAT_F";
+//_RATmag2 = "MRAWS_HE_F";
+
 // Medium AT
 _MAT = "launch_NLAW_F";
 _MATmag1 = "NLAW_F";
@@ -248,7 +253,7 @@ _jet = ["jp"];
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 _baseUniform = ["U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3"];
-_baseHelmet = ["H_Watchcap_khk","H_Shemag_olive_hs","H_MilCap_tna_F","H_Cap_khaki_specops_UK","H_Bandanna_camo","H_Bandanna_cbr","H_Bandanna_khk_hs","H_Booniehat_khk","H_Booniehat_khk_hs","H_Booniehat_oli","H_Booniehat_tna_F"];
+_baseHelmet = ["H_Watchcap_khk","H_Shemag_olive_hs","H_Cap_khaki_specops_UK","H_Bandanna_camo","H_Bandanna_cbr","H_Bandanna_khk_hs","H_Booniehat_khk","H_Booniehat_khk_hs","H_Booniehat_oli","H_Cap_headphones"];
 _baseGlasses = [];
 
 // Vests

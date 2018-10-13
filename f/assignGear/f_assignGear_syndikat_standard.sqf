@@ -174,7 +174,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addmagazines [_MMGmag, 2];
 	};
 // Medium MG Team Leader Loadout:
@@ -188,7 +188,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MMGmag, 1];
+		_unit addmagazines [_MMGmag_tr, 1];
 		_unit addmagazines [_MMGmag, 2];
 		_unit addWeapon "Rangefinder";
 	};
@@ -230,7 +230,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag, 2];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MATmag1, 1];
+		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag2, 1];
 	};
 // Medium AT Assistant Loadout:
 	case "matag":
@@ -243,7 +244,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MATmag1, 1];
+		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag2, 1];
 	};
 // Medium AT Team Leader Loadout:
 	case "matl":
@@ -256,7 +258,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MATmag1, 1];
+		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag2, 1];
 		_unit addWeapon "Rangefinder";
 	};
 // Heavy AT Gunner Loadout:
