@@ -6,6 +6,7 @@
 
 // SET GROUP IDS
 // Execute setGroupID Function for all factions
+// Note: The actual group IDs are defined in f/groupMarkers/fn_groupData.sqf
 {
 	_x params ["_grp", "", "", "", "_id"];
 	if (_id != "") then {
