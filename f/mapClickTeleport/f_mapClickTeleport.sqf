@@ -63,6 +63,6 @@ if (f_var_mapClickTeleport_GroupTeleport && player != leader group player)  exit
 f_mapClickTeleportAction = player addaction [f_var_mapClickTeleport_textAction,{[] spawn f_fnc_mapClickTeleportAction},"", 0, false,false,"","_this == player"];
 
 if (f_var_mapClickTeleport_TimeLimit > 0) then {
-	uiSleep f_var_mapClickTeleport_TimeLimit;
+	sleep f_var_mapClickTeleport_TimeLimit;
 	player removeAction f_mapClickTeleportAction;
 };
