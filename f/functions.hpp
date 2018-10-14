@@ -56,11 +56,6 @@ class F // Defines the "owner"
 		class SetLocalFTMemberMarkers{};
 		class GetMarkerColor{};
 	};
-	class bodyRemoval
-	{
-		file = "f\removeBody";
-		class removeBody{};
-	};
 	class setAISkill
 	{
 		file = "f\setAISKill";
@@ -94,6 +89,7 @@ class F // Defines the "owner"
 		class zeusInit{};
 		class zeusAddAddons{};
 		class zeusAddObjects{};
+		class zeusInitLocal{};
 	};
 	class safeStart
 	{
@@ -109,13 +105,8 @@ class F // Defines the "owner"
 	class woundingsystem
 	{
 		file = "f\medical";
-		class reviveEhDammaged {};
 		class addDragAction {};
 		class onDrag {};
-		class findDeadAnim {};
-		class addPullOutAction {};
-		class vehicleHasWounded {};
-		class pullOutUnit {};
 	};
 	class disableThermals
 	{
