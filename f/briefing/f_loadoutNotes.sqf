@@ -6,7 +6,10 @@ if (!hasInterface) exitWith {}; //Exit if not a player.
 
 // Local function to set the proper magazine count.
 private _fnc_wepMags = {
-	params ["_weapon", "_mags"];
+	params [
+		["_weapon", "", [""]],
+		["_mags", "", [""]],
+	];
 
 	//Get possible magazines for weapon
 	private _wepMags = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
