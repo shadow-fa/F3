@@ -11,7 +11,7 @@ if !(isServer) exitWith {};
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_units","_unit","_faction","_known","_excludeFactions","_unitClasses"];
+private ["_units","_unit","_faction","_known","_excludeFactions","_unitClasses","_defaultclass"];
 
 // ====================================================================================
 
@@ -19,6 +19,7 @@ private ["_units","_unit","_faction","_known","_excludeFactions","_unitClasses"]
 
 // The default gear type picked when no corresponding entry is found in the _unitClasses array
 // Set _defaultclass to "" to let these units keep their default gear
+// Be careful not to apply armed loadouts to units that should not be armed (e.g. civilians)
 _defaultclass = "";
 
 // The factions that should be ignored
@@ -77,8 +78,9 @@ _unitClasses = [
 	["_Bandit_5_"		,	"r"		],
 	["_Bandit_6_"		,	"gren"	],
 	["_Bandit_7_"		,	"car"	],
-	["_Bandit_8_"		,	"engm"	]
-
+	["_Bandit_8_"		,	"engm"	],
+	
+	["_soldier_"	,	"r"		]
 	// No comma after the last array!
 
 ];
@@ -104,7 +106,7 @@ _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_setLocalVar
 				{
 					_known = (toLower (typeOf _unit)) find (toLower (_x select 0)) != -1;
 
-					// If the unit's classname corresponds to a class in the assignment array, set it's gear accordingly
+					// If the unit's classname corresponds to a class in the assignment array, set its gear accordingly
 					if (_known) exitWith {
 						[_x select 1, _unit] remoteExecCall ["f_fnc_assignGear", _unit];
 					};
