@@ -48,15 +48,16 @@ if (f_var_mapClickTeleport_GroupTeleport) then {
 // If the player is in a vehicle and not HALO-ing, the complete vehicle is moved.
 // Otherwise the players are teleported individually.
 
-if (vehicle player != player && f_var_mapClickTeleport_Height == 0) then {
-	(vehicle player) setPos (f_var_mapClickTeleport_telePos findEmptyPosition [0,150,typeOf (vehicle player)]);
-
-	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification;
-
-	//Filter for units that are not in the group-leader's vehicle
-	//These units still need to be teleported.
-	_units = _units select {vehicle _x != vehicle player};
-};
+// Note: Support for vehicles is currently disabled as it is not officially supported.
+//if (vehicle player != player && f_var_mapClickTeleport_Height == 0) then {
+//	(vehicle player) setPos (f_var_mapClickTeleport_telePos findEmptyPosition [0,150,typeOf (vehicle player)]);
+//
+//	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification;
+//
+//	//Filter for units that are not in the group-leader's vehicle
+//	//These units still need to be teleported.
+//	_units = _units select {vehicle _x != vehicle player};
+//};
 
 {
 	[_x,f_var_mapClickTeleport_telePos] remoteExec ["f_fnc_mapClickTeleportSetPos", _x];
