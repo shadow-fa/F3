@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {}; //Exit if not a player.
 private _fnc_wepMags = {
 	params [
 		["_weapon", "", [""]],
-		["_mags", "", [""]],
+		["_mags", "", [""]]
 	];
 
 	//Get possible magazines for weapon
