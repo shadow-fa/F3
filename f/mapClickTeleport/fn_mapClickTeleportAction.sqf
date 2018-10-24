@@ -48,30 +48,35 @@ if (f_var_mapClickTeleport_GroupTeleport) then {
 // If the player is in a vehicle and not HALO-ing, the complete vehicle is moved.
 // Otherwise the players are teleported individually.
 
-// Note: Support for vehicles is currently disabled as it is not officially supported.
-//if (vehicle player != player && f_var_mapClickTeleport_Height == 0) then {
-//	(vehicle player) setPos (f_var_mapClickTeleport_telePos findEmptyPosition [0,150,typeOf (vehicle player)]);
-//
-//	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification;
-//
-//	//Filter for units that are not in the group-leader's vehicle
-//	//These units still need to be teleported.
-//	_units = _units select {vehicle _x != vehicle player};
-//};
+// Note:
+// Vehicles from other group members are not teleported,
+// because there are too many edge-cases and we would need to make sure
+// that the vehicles don't end up on top of each other (because they cannot be steered)
+// e.g. We don't know if that other vehicle has another group leader, 
+// which could teleport their vehicle themself and we don't want to hijack
+// it in that case.
+// Also, vehicles that are loaded in cargo should not be teleported.
+if (vehicle player != player) then {
+	if (! isNull isVehicleCargo vehicle player) exitWith {};
+
+	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification;
+
+	// Filter for units that are not in the group-leader's vehicle
+	// These units still need to be teleported separately.
+	_units = _units select {vehicle _x != vehicle player};
+
+	// Add the vehicle itself
+	_units pushBack (vehicle player);
+};
 
 {
-	[_x,f_var_mapClickTeleport_telePos] remoteExec ["f_fnc_mapClickTeleportSetPos", _x];
+	// Teleport unit/vehicle
+	[_x, f_var_mapClickTeleport_telePos, f_var_mapClickTeleport_Height] remoteExec ["f_fnc_mapClickTeleportSetPos", _x];
+
+	// Remove the teleport action from all teleported units
+	{
+		[_x] remoteExec ["f_fnc_mapClickTeleportRemoveAction", _x];
+	} forEach crew vehicle _x;
 } forEach _units;
 
 openMap [false, false];
-
-// ====================================================================================
-
-// REMOVE ACTION
-// Remove the action if we don't have any uses left
-
-f_var_mapClickTeleport_Used = f_var_mapClickTeleport_Used + 1;
-
-if (f_var_mapClickTeleport_Uses != 0 && f_var_mapClickTeleport_Used >= f_var_mapClickTeleport_Uses) then {
-	player removeAction f_mapClickTeleportAction;
-};

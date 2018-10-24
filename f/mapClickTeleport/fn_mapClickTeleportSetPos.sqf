@@ -6,11 +6,10 @@
 // SET KEY VARIABLES
 
 params [
-	"_unit",
-	["_pos", [0,0,0], [[]], 3]
+	["_obj", objNull, [objNull]],
+	["_pos", [0,0,0], [[]]],
+	["_height", 0, [0]]
 ];
-
-private _dispersion = 100; // The maximum dispersion for units when HALO jumping
 
 // ====================================================================================
 
@@ -18,25 +17,56 @@ private _dispersion = 100; // The maximum dispersion for units when HALO jumping
 // The component should not run anywhere else but where the unit is local by default
 // This check is a redundancy to ensure this
 
-if !(local _unit) exitWith {};
+if !(local _obj) exitWith {};
+
+// ====================================================================================
+
+// SET DISPERSION
+
+private _dispersion = 100; // The maximum dispersion for units when HALO jumping
+private _dispersionHeight = 15; //The maximum dispersion in height when HALO jumping
+if (_height == 0) then {
+	_dispersion = 10;
+	_dispersionHeight = 0;
+};
+
+// ====================================================================================
+
+// HANDLING VEHICLES
+
+if ( ! (_obj isKindOf "CAManBase") ) then {
+	// Disable dispersion, so that the vehicle can be placed exactly where we want.
+	// e.g. on roads, where no obstacles are in the way.
+	_dispersion = 0;
+
+	if (_height == 0) then {
+		private _emptyPosition = (_pos findEmptyPosition [0, 150, typeOf _obj]);
+		if (count _emptyPosition >= 2) then {
+			_pos = _emptyPosition;
+		}
+	};
+};
 
 // ====================================================================================
 
 // TELEPORT UNITS
 
-if (f_var_mapClickTeleport_Height == 0) then {
-	_pos = _pos vectorAdd [random 10 - random 10, random 10 - random 10, 0];
-} else {
-	_pos = _pos vectorAdd [random _dispersion - random _dispersion, random _dispersion - random _dispersion, f_var_mapClickTeleport_Height + random 15 - random 15];
-};
-_unit setPos _pos;
+// Make sure the _pos array has 3 elements and set the height
+_pos set [2, _height];
+
+_pos = _pos vectorAdd [random _dispersion - random _dispersion, random _dispersion - random _dispersion, random _dispersionHeight - random _dispersionHeight];
+_obj setPos _pos;
 
 // Display a notification for players
-if (_unit == vehicle player) then {["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification};
+if (_obj == vehicle player) then {
+	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification
+};
 
-// HALO - BACKPACK
-// If unit is parajumping, spawn the following code to add a parachute and restore the old backpack after landing
+// ====================================================================================
 
-if (f_var_mapClickTeleport_Height > 0) then {
-	[_unit] spawn f_fnc_mapClickTeleportParachute;
+// HALO
+
+// If unit or vehicle is paradropping, a parachute is added
+if (_height > 0) then {
+	[_obj] spawn f_fnc_mapClickTeleportParachute;
 };

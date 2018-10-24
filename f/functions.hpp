@@ -67,6 +67,8 @@ class F // Defines the "owner"
 		class mapClickTeleportAction{};
 		class mapClickTeleportSetPos{};
 		class mapClickTeleportParachute{};
+		class mapClickTeleportRemoveAction{};
+		class mapClickTeleportBriefing{};
 	};
 	class nametag
 	{
