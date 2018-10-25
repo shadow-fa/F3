@@ -65,6 +65,11 @@ if (vehicle player != player) then {
 	// These units still need to be teleported separately.
 	_units = _units select {vehicle _x != vehicle player};
 
+	// Teleport the crew outside of the vehicle if f_var_mapClickTeleport_Outside is set
+	if (f_var_mapClickTeleport_Height > 0 && f_var_mapClickTeleport_Outside) then {
+		_units append (crew vehicle player);
+	};
+
 	// Add the vehicle itself
 	_units pushBack (vehicle player);
 };
