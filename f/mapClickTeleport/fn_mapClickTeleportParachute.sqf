@@ -17,7 +17,7 @@ if ( ! (_obj isKindOf "CAManBase") ) then {
 
 	waitUntil { sleep 0.1; getPos _obj select 2 < _heightOpenParachute };
 	_obj engineOn false;
-	
+
 	//Set the vehicle captive to prevent AT units from shooting it down immediately
 	_obj setCaptive true;
 
@@ -33,16 +33,17 @@ if ( ! (_obj isKindOf "CAManBase") ) then {
 	_obj setVectorUp [0, 0, 1];
 	_obj setVelocity [0, 0, -1];
 	_obj setPos [getPos _obj select 0, getPos _obj select 1, 0.5];
+	_obj allowDamage true;
+
+	// Disable captivity to make the vehicles a viable target again
+	_obj setCaptive false;
 
 	// Let the parachute fall down
 	_chute setVelocity [0 - sin windDir * 5, 0 - cos windDir * 5, 0];
 	_chute disableCollisionWith _obj;
 
-	//After having landed, disable captivity, re-enable damage and remove the parachute
+	// Wait before removing the parachute to allow it be die naturally
 	sleep 10;
-	_obj setCaptive false;
-	_obj allowDamage true;
-
 	if (!isNull _chute) then {
 		deleteVehicle _chute;
 	};
@@ -57,7 +58,7 @@ if ( ! (_obj isKindOf "CAManBase") ) then {
 	removeBackpack _obj;
 	_obj addBackpack "B_parachute";
 
-	// Once on the ground, remove the parachute 
+	// Once on the ground, remove the parachute
 	// and re-add the backpack with all its content
 	waitUntil {sleep 0.1; isTouchingGround _obj};
 	if (alive _obj) then {
