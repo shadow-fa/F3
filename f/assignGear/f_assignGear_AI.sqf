@@ -87,7 +87,7 @@ private _units = if (count _this == 0) then [{waitUntil {scriptDone f_script_set
 
 //Only process units that have not been touched by the F3 Assign Gear Component
 _units = _units select { ! (_x getvariable ["f_var_assignGear_done", false]) };
-//Only process playerableUnits
+//Only process non-playerableUnits
 _units = _units select {!(_x in playableUnits) && (_x isKindOf "Man")};
 
 // LOOP THROUGH AI UNITS AND ASSIGN GEAR
