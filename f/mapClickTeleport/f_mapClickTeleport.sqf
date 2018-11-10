@@ -18,12 +18,12 @@ if (isNull player) then
 
 // SET UP VARIABLES
 // Make sure all global variables are initialized
-if (isNil "f_var_mapClickTeleport_Uses")          then {f_var_mapClickTeleport_Uses = 0};
-if (isNil "f_var_mapClickTeleport_TimeLimit")     then {f_var_mapClickTeleport_TimeLimit = 0};
-if (isNil "f_var_mapClickTeleport_GroupTeleport") then {f_var_mapClickTeleport_GroupTeleport = false};
-if (isNil "f_var_mapClickTeleport_Units")         then {f_var_mapClickTeleport_Units = []};
-if (isNil "f_var_mapClickTeleport_Height")        then {f_var_mapClickTeleport_Height = 0};
-if (isNil "f_var_mapClickTeleport_Outside")       then {f_var_mapClickTeleport_Outside = false};
+if (isNil "f_var_mapClickTeleport_Uses")             then {f_var_mapClickTeleport_Uses = 0};
+if (isNil "f_var_mapClickTeleport_TimeLimit")        then {f_var_mapClickTeleport_TimeLimit = 0};
+if (isNil "f_var_mapClickTeleport_GroupTeleport")    then {f_var_mapClickTeleport_GroupTeleport = false};
+if (isNil "f_var_mapClickTeleport_Units")            then {f_var_mapClickTeleport_Units = []};
+if (isNil "f_var_mapClickTeleport_Height")           then {f_var_mapClickTeleport_Height = 0};
+if (isNil "f_var_mapClickTeleport_SaferVehicleHALO") then {f_var_mapClickTeleport_SaferVehicleHALO = false};
 
 // Setup the localized strings for the various stages of the component
 // Depending on the setting of the height variable the strings either use the teleport or the HALO option.

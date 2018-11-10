@@ -52,7 +52,7 @@ if (f_var_mapClickTeleport_GroupTeleport) then {
 // Vehicles from other group members are not teleported,
 // because there are too many edge-cases and we would need to make sure
 // that the vehicles don't end up on top of each other (because they cannot be steered)
-// e.g. We don't know if that other vehicle has another group leader, 
+// e.g. We don't know if that other vehicle has another group leader,
 // which could teleport their vehicle themself and we don't want to hijack
 // it in that case.
 // Also, vehicles that are loaded in cargo should not be teleported.
@@ -65,8 +65,8 @@ if (vehicle player != player) then {
 	// These units still need to be teleported separately.
 	_units = _units select {vehicle _x != vehicle player};
 
-	// Teleport the crew outside of the vehicle if f_var_mapClickTeleport_Outside is set
-	if (f_var_mapClickTeleport_Height > 0 && f_var_mapClickTeleport_Outside) then {
+	// Teleport the crew outside of the vehicle if HALO-ing and f_var_mapClickTeleport_SaferVehicleHALO is set
+	if (f_var_mapClickTeleport_Height > 0 && f_var_mapClickTeleport_SaferVehicleHALO) then {
 		_units append (crew vehicle player);
 	};
 
