@@ -57,10 +57,9 @@ _pos set [2, _height];
 _pos = _pos vectorAdd [random _dispersion - random _dispersion, random _dispersion - random _dispersion, random _dispersionHeight - random _dispersionHeight];
 _obj setPos _pos;
 
-// Display a notification for players
-if (_obj == vehicle player) then {
-	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification
-};
+// Display a notification that the teleport is done
+// Note: crew on a man returns a single element array containing that man
+["MapClickTeleport",[f_var_mapClickTeleport_textDone]] remoteExecCall ["BIS_fnc_showNotification", crew _obj];
 
 // ====================================================================================
 
