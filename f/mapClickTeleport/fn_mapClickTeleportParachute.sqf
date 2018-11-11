@@ -42,7 +42,7 @@ if ( ! (_obj isKindOf "CAManBase") ) then {
 	_chute setVelocity [0 - sin windDir * 5, 0 - cos windDir * 5, 0];
 	_chute disableCollisionWith _obj;
 
-	// Wait before removing the parachute to allow it be die naturally
+	// Wait before removing the parachute, to allow it to die naturally
 	sleep 10;
 	if (!isNull _chute) then {
 		deleteVehicle _chute;
