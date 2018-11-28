@@ -59,7 +59,7 @@ _obj setPos _pos;
 
 // Display a notification that the teleport is done
 // Note: crew on a man returns a single element array containing that man
-["MapClickTeleport",[f_var_mapClickTeleport_textDone]] remoteExecCall ["BIS_fnc_showNotification", crew _obj];
+["MapClickTeleport",[f_var_mapClickTeleport_textDone]] remoteExecCall ["BIS_fnc_showNotification", (crew _obj) select {isPlayer _x}];
 
 // ====================================================================================
 
