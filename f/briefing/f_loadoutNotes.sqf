@@ -2,7 +2,7 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-if (!hasInterface || (side _obj == sideLogic)) exitWith {}; //Exit if not a player.
+if (!hasInterface || (side player == sideLogic)) exitWith {}; //Exit if not a player.
 
 // Local function to set the proper magazine count.
 private _fnc_wepMags = {
