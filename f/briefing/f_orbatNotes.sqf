@@ -2,7 +2,7 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-if (!hasInterface) exitWith {}; //Exit if not a player.
+if (!hasInterface || (side _obj == sideLogic)) exitWith {}; //Exit if not a player.
 
 // Group IDs need to be set before the ORBAT listing can be created
 waitUntil {scriptDone f_script_setGroupIDs};
