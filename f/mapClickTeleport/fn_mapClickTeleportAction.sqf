@@ -59,7 +59,6 @@ if (f_var_mapClickTeleport_GroupTeleport) then {
 if (vehicle player != player) then {
 	if (! isNull isVehicleCargo vehicle player) exitWith {};
 
-	["MapClickTeleport",[f_var_mapClickTeleport_textDone]] call BIS_fnc_showNotification;
 
 	// Filter for units that are not in the group-leader's vehicle
 	// These units still need to be teleported separately.
