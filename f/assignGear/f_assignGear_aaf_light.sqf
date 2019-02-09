@@ -98,7 +98,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
-		_unit addmagazines [_glsmokewhite, 3];
+		_unit addmagazines [_glsmokewhite, 5];
 		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_pistolmag, 4];
 		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope

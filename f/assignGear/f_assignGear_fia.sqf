@@ -68,7 +68,7 @@
 // GENERAL EQUIPMENT USED BY MULTIPLE CLASSES
 
 // ATTACHMENTS - PRIMARY
-_attach1 = "acc_pointer_IR";	// IR Laser
+_attach1 = "";	// IR Laser
 _attach2 = "acc_flashlight";	// Flashlight
 
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
@@ -125,7 +125,7 @@ _diverMag2 = "30Rnd_556x45_Stanag_Tracer_Red";
 _diverMag3 = "20Rnd_556x45_UW_mag";
 
 // Rifle with GL and HE grenades (CO, DC, FTLs)
-_glrifle = selectRandom ["arifle_TRG21_GL_F","arifle_TRG21_GL_F","arifle_Mk20_GL_plain_F"]; // Slight randomization, biased towards TRG_glriflemag = "30Rnd_556x45_Stanag_red";
+_glrifle = selectRandom ["arifle_TRG21_GL_F","arifle_TRG21_GL_F","arifle_Mk20_GL_plain_F"]; // Slight randomization, biased towards TRG
 _glriflemag = "30Rnd_556x45_Stanag_red";
 _glriflemag_tr = "30Rnd_556x45_Stanag_Tracer_Red";
 _glmag = "1Rnd_HE_Grenade_shell";

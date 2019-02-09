@@ -67,9 +67,10 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
+		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
+		_unit addWeapon "Rangefinder";
 		_unit addmagazines [_smokegrenadegreen, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addWeapon "Rangefinder";
 	};
 // Squad Leader / DC Loadout:
 	case "dc":
@@ -85,9 +86,11 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
 		_unit addmagazines [_glsmokewhite, 3];
+		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_pistolmag, 2];
-		_unit addmagazines [_smokegrenadepurple, 2];
+		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
+		_unit addmagazines [_smokegrenadepurple, 3];
 	};
 // Platoon CO Loadout:
 	case "co":
@@ -104,8 +107,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokewhite, 5];
 		_unit addmagazines [_glsmokered, 3];
 		_unit addmagazines [_pistolmag, 4];
-		_unit addmagazines [_smokegrenadepurple, 2];
+		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
+		_unit addmagazines [_smokegrenadepurple, 3];
 	};
 // JTAC Loadout:
 	case "jtac":
@@ -120,7 +124,8 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokered, 8];
-		_unit addmagazines [_pistolmag, 3];
+		_unit addmagazines [_pistolmag, 4];
+		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
         _unit addmagazines ["Laserbatteries", 1];
 		_unit addWeapon _laserdesignator;
 	};
@@ -335,8 +340,8 @@ switch (_typeofUnit) do
 		_unit addBackpack _bag;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
-		_unit addweapon _SAM;
 		_unit addmagazines [_SAMmag, 1];
+		_unit addweapon _SAM;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
 		_unit addmagazines [_carbinemag, 2];
@@ -405,7 +410,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 5];
-		_unit addmagazines [_SNrifleMag, 3];
+		_unit addmagazines [_SNrifleMag, 6];
 		_unit addmagazines [_pistolmag, 5];
 	};
 // Spotter Loadout:
@@ -418,8 +423,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
 		_unit addmagazines [_grenade, 2];
-		_unit addmagazines [_SNrifleMag, 3];
+		_attachments pushback (_attach1); // Adds laser pointer, keeps default scope
 		_unit addWeapon "Rangefinder";
+		_unit addmagazines [_SNrifleMag, 3];
 	};
 // Vehicle Commander Loadout:
 	case "vc":
