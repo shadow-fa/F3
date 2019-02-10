@@ -379,7 +379,7 @@ switch (_typeofUnit) do
 // Heavy SAM Team Leader Loadout:
 	case "hsamag":
 	{
-		_unit addBackpack _baghmgag;
+		_unit addBackpack _baghsamag;
 		_unit addmagazines [_riflemag, 1];
 		_unit addweapon _rifle;
 		_unit addItem _firstaid;
