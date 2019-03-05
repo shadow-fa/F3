@@ -81,7 +81,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag, 1];
 		_unit addweapon _pistol;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 1];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glmag, 5];
@@ -101,7 +101,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag, 1];
 		_unit addweapon _pistol;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 1];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokewhite, 5];
@@ -120,7 +120,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag, 1];
 		_unit addweapon _pistol;
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 1];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_glriflemag, 4];
 		_unit addmagazines [_glriflemag_tr, 2];
 		_unit addmagazines [_glsmokered, 8];
