@@ -537,7 +537,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_riflemag, 4];
 		_unit addmagazines [_riflemag_tr, 2];
-		_unit addmagazines [_grenade, 3];
+		_unit addmagazines [_grenade, 2];
 	};
 // Carbineer Loadout:
 	case "car":
@@ -548,7 +548,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
-		_unit addmagazines [_grenade, 3];
+		_unit addmagazines [_grenade, 2];
 	};
 // Submachinegunner Loadout:
 	case "smg":
@@ -558,7 +558,7 @@ switch (_typeofUnit) do
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_smgmag, 6];
-		_unit addmagazines [_grenade, 3];
+		_unit addmagazines [_grenade, 2];
 	};
 // Grenadier Loadout:
 	case "gren":
