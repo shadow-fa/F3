@@ -206,7 +206,7 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
@@ -236,7 +236,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag, 2];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
-		_unit addmagazines [_MATmag1, 2];
+		_unit addmagazines [_MATmag1, 4];
 		_unit addmagazines [_MATmag2, 1];
 	};
 // Medium AT Assistant Loadout:
@@ -278,7 +278,7 @@ switch (_typeofUnit) do
 		_unit addweapon _HAT;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 		_unit addmagazines [_HATmag1, 1];
@@ -345,7 +345,7 @@ switch (_typeofUnit) do
 		_unit addweapon _SAM;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
@@ -384,7 +384,7 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 1];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
 		_unit addmagazines [_smokegrenade, 4];
 	};
