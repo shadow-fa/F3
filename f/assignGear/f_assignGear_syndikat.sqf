@@ -200,6 +200,7 @@ _MMGmag_tr = "150Rnd_762x54_Box_Tracer";
 // Marksman rifle
 _DMrifle = "srifle_DMR_03_F";
 _DMriflemag = "20Rnd_762x51_Mag";
+_DMriflemag_tr = "20Rnd_762x51_Mag";
 
 // Rifleman AT
 _RAT = "launch_RPG32_ghex_F";
