@@ -49,7 +49,13 @@ _mkrName setMarkerTextLocal _mkrText;
 
 while {{!isNull _x} count units _grp > 0} do
 {
-	_mkrName setMarkerPosLocal [(getPos leader _grp select 0),(getPos leader _grp select 1)];
+	_mkrName setMarkerPosLocal (getPos leader _grp select [0,2]);
+
+	//Remove dead players from the group to prevent wrong group markers
+	{
+		[_x] join grpNull;
+	} forEach (units _grp select {! alive _x});
+
 	sleep 6;
 };
 
