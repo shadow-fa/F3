@@ -302,7 +302,7 @@ switch (_typeofUnit) do
 // Mortar Gunner Loadout:
 	case "mtrg":
 	{
-		_unit addBackpack _bagmtrg ;
+		_unit addBackpack _bagmtrg;
 		_unit addmagazines [_carbinemag, 1];
 		_unit addweapon _carbine;
 		_unit addItem _firstaid;
