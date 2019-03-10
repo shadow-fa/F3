@@ -18,11 +18,10 @@ switch (_typeofUnit) do
 		_unit addweapon _AR;
 		_attachments pushback (_bipod1); // Adds the bipod
 		_unit addItem _firstaid;
-		_unit addmagazines [_smokegrenade, 1];
+		_unit addmagazines [_smokegrenade, 3];
 		_unit addmagazines [_ARmag, 1];
 		_unit addmagazines [_ARmag_tr, 1];
 		_unit addmagazines [_grenade, 1];
-		_unit addmagazines [_smokegrenade, 4];
 	};
 // Rifleman (AT) Loadout:
 	case "rat":
