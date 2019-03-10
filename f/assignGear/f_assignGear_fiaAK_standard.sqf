@@ -230,9 +230,9 @@ switch (_typeofUnit) do
 		_unit addweapon _MAT;
 		_unit addItem _firstaid;
 		_unit addmagazines [_smokegrenade, 3];
-		_unit addmagazines [_carbinemag, 2];
+		_unit addmagazines [_carbinemag, 4];
 		_unit addmagazines [_carbinemag_tr, 2];
-		_unit addmagazines [_MATmag1, 4];
+		_unit addmagazines [_MATmag1, 2];
 		_unit addmagazines [_MATmag2, 1];
 	};
 // Medium AT Assistant Loadout:
