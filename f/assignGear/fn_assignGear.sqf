@@ -169,7 +169,7 @@ if (_faction in ["ind_c_f","syndikat"]) then {
 // ====================================================================================
 
 // GEAR: 3IFB
-// The following block of code executes only if the unit is manually assigned the Syndikat faction; it
+// The following block of code executes only if the unit is manually assigned the 3IFB 'faction'; it
 // automatically includes a file which contains the appropriate equipment data.
 
 if (_faction in ["3ifb"]) then {
