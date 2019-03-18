@@ -94,7 +94,7 @@ _attachments = []; // The default attachment set for most units, overwritten in 
 // ATTACHMENTS - HANDGUN
 _hg_silencer1 = "";					// No suppressor for Zubr
 
-_hg_scope1 = "optic_mrd";			// MRD
+_hg_scope1 = "optic_MRD";			// MRD
 
 // Default setup
 _hg_attachments= []; // The default attachment set for handguns, overwritten in the individual unitType
@@ -109,7 +109,7 @@ _riflemag = "30Rnd_762x39_Mag_F";
 _riflemag_tr = "30Rnd_762x39_Mag_Tracer_F";
 
 // Standard Carabineer (Medic, Rifleman (AT), MAT Gunner, MTR Gunner, Carabineer)
-_carbine = selectRandom ["arifle_AK12_F","arifle_AKM_F","arifle_AKM_F"]; // Slight randomization, biased towards TRG
+_carbine = selectRandom ["arifle_AK12_F","arifle_AKM_F","arifle_AKM_F"]; // Slight randomization, biased towards AKM
 _carbinemag = "30Rnd_762x39_Mag_F";
 _carbinemag_tr = "30Rnd_762x39_Mag_Tracer_F";
 
