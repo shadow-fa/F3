@@ -96,6 +96,16 @@ if (_faction in ["blu_t_f","natopacific"]) then {
 
 // ====================================================================================
 
+// GEAR: BLUFOR > NATO (Woodland)
+// The following block of code executes only if the unit belongs to the NATO (Woodland) faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["blu_w_f","natowoodland"]) then {
+	#include "f_assignGear_natoWoodland.sqf"
+};
+
+// ====================================================================================
+
 // GEAR: BLUFOR > GENDARMERIE
 // The following block of code executes only if the unit belongs to the gendarmerie faction; it
 // automatically includes a file which contains the appropriate equipment data.
@@ -123,6 +133,16 @@ if (_faction in ["opf_f","csat"]) then {
 
 if (_faction in ["opf_t_f","csatpacific"]) then {
 	#include "f_assignGear_csatPacific.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: OPFOR > Spetsnaz
+// The following block of code executes only if the unit belongs to the Spetsnaz faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["opf_r_f","spetsnaz"]) then {
+	#include "f_assignGear_spetsnaz.sqf"
 };
 
 // ====================================================================================
@@ -163,6 +183,26 @@ if (_faction in ["blu_ctrg_f","ctrg"]) then {
 
 if (_faction in ["ind_c_f","syndikat"]) then {
 	#include "f_assignGear_syndikat.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPEDENT > LDF
+// The following block of code executes only if the unit belongs to the LDF faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["ind_e_f","ldf"]) then {
+	#include "f_assignGear_ldf.sqf"
+};
+
+// ====================================================================================
+
+// GEAR: INDEPEDENT > Looters
+// The following block of code executes only if the unit belongs to the Looters faction; it
+// automatically includes a file which contains the appropriate equipment data.
+
+if (_faction in ["ind_l_f","looters"]) then {
+	#include "f_assignGear_looters.sqf"
 };
 
 // ====================================================================================
