@@ -148,7 +148,7 @@ if (_faction in ["opf_r_f","spetsnaz"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > AAF
+// GEAR: INDEPENDENT > AAF
 // The following block of code executes only if the unit belongs to the AAF faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
@@ -178,7 +178,7 @@ if (_faction in ["blu_ctrg_f","ctrg"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > SYNDIKAT
+// GEAR: INDEPENDENT > SYNDIKAT
 // The following block of code executes only if the unit is manually assigned the Syndikat faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
@@ -188,7 +188,7 @@ if (_faction in ["ind_c_f","syndikat"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > LDF
+// GEAR: INDEPENDENT > LDF
 // The following block of code executes only if the unit belongs to the LDF faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
@@ -198,12 +198,12 @@ if (_faction in ["ind_e_f","ldf"]) then {
 
 // ====================================================================================
 
-// GEAR: INDEPEDENT > Looters
-// The following block of code executes only if the unit belongs to the Looters faction; it
+// GEAR: INDEPENDENT > NPR
+// The following block of code executes only if the unit belongs to the NPR faction; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction in ["ind_l_f","looters"]) then {
-	#include "f_assignGear_looters.sqf"
+if (_faction in ["ind_l_f","npr"]) then {
+	#include "f_assignGear_npr.sqf"
 };
 
 // ====================================================================================
