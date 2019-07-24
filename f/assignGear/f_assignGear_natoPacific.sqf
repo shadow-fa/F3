@@ -218,7 +218,7 @@ _RATmag2 = "MRAWS_HE_F";
 
 // Medium AT
 _MAT = "launch_MRAWS_green_F";
-_MATmag1 = "MRAWS_HEAT_F";
+_MATmag1 = "MRAWS_HEAT55_F";
 _MATmag2 = "MRAWS_HE_F";
 
 // Surface Air
