@@ -16,20 +16,21 @@ private _faction = toLower ([_unit] call f_fnc_virtualFaction);
 
 // The following block of code determines which NATO and CSAT insignia variants will be used:
 
-_insignia_style_NATO = _insignia_styles select 0;
-_insignia_style_CSAT = _insignia_styles select 1;
+_insignia_styles params [
+	["_insignia_style_NATO", "Altis", [""]],
+	["_insignia_style_CSAT", "Altis", [""]]
+];
 
-_NATO_Medic_Badge = "NATO_Medic_Badge";
-_CSAT_Medic_Badge = "CSAT_Medic_Badge";
-
-if (_insignia_style_NATO == "Tanoa") then {_NATO_Medic_Badge = "NATO_Pacific_Medic_Badge"};
-
-switch (_insignia_style_CSAT) do
-	{
-	case "Tanoa" : {_CSAT_Medic_Badge = "CSAT_Pacific_Medic_Badge";};
-	case "Altis" : {_CSAT_Medic_Badge = "CSAT_Medic_Badge";};
-	case "Urban" : {_CSAT_Medic_Badge = "CSAT_Urban_Medic_Badge";};
-	};
+private _NATO_Medic_Badge = switch (_insignia_style_NATO) do {
+	case "Tanoa" : {"NATO_Pacific_Medic_Badge"};
+	default        {"NATO_Medic_Badge"};
+};
+private _CSAT_Medic_Badge = switch (_insignia_style_CSAT) do {
+	case "Tanoa" : {"CSAT_Pacific_Medic_Badge"};
+	case "Altis" : {"CSAT_Medic_Badge"};
+	case "Urban" : {"CSAT_Urban_Medic_Badge"};
+	default        {"CSAT_Medic_Badge"};
+};
 
 // ===================================================================================
 
@@ -49,7 +50,7 @@ private _roleBadge = switch (_typeofUnit) do
 			case (_faction in ["opf_t_f","csatpacific"]) : {"CSAT_Pacific_Medic_Badge"};
 			case (_faction in ["ind_f","ind_e_f","aaf","ldf"]) : {"AAF_Medic_Badge"};
 			case (_faction in ["opf_r_f","spetsnaz"]) : {"CSAT_Pacific_Medic_Badge"};
-			case (_faction in ["blu_ctrg_f","ctrg"]) : {_NATO_Medic_Badge"};
+			case (_faction in ["blu_ctrg_f","ctrg"]) : {_NATO_Medic_Badge};
 			default {"NATO_Medic_Badge"};
 		};
 	};
@@ -102,7 +103,7 @@ switch (true) do
 			];
 		};
 	};
-	case (_faction in ["blu_t_f","blu_w_f","natoPacific","natoWoodland"]): {
+	case (_faction in ["blu_t_f","blu_w_f","natopacific","natowoodland"]): {
 		_groupBadges = [
 			["GrpNATO_ASL","NATO_Pacific_ASL_Badge"],
 			["GrpNATO_A1","NATO_Pacific_A1_Badge"],
